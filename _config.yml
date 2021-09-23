@@ -1,1 +1,17 @@
 theme: jekyll-theme-minimal
+# Site settings
+title: Tableau CI Pipeline
+email: github@tableau.com
+description: Test connectors to connect to ODBC and JDBC data sources in Tableau.
+repository: "tableau/connector-plugin-sdk"
+baseurl: "/taco-ci"
+permalinks: pretty
+defaults:
+  - scope:
+      path: "" # Apply to all files
+    values:
+      layout: "default"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
