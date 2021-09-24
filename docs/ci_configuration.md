@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline Configuration
+title: Configuration
 keywords: CI pipeline
 sidebar: cip_sidebar
 summary: "Configure your GitHub repo to automate testing for your Tableau connector."

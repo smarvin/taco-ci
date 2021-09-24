@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline Tuning
+title: Tuning
 keywords: CI pipeline
 sidebar: cip_sidebar
 permalink: ci_tuning.html

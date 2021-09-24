@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline Overview
+title: Overview
 keywords: CI pipeline
 sidebar: cip_sidebar
 permalink: ci_overview.html

@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline Testing
+title: Testing
 keywords: CI pipeline
 sidebar: cip_sidebar
 permalink: ci_test.html
@@ -11,13 +11,13 @@ To test your connector, you must tag a commit with a version and then commit the
 ## Create a tag
 When you [create a tag](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags) for your connector, you start the CI pipeline. The results of the pipeline are emailed to the address you [configured earlier](./ci_configuration.html).
 
- * Make sure that your tag is the folder path to the ci.json config. 
+ * Make sure that your tag is the folder path to the ci.json config.
    For example, `taco.postgres-unpackaged-jdbc-example`.
  * Append a unique suffix to the tag. We recommend that you use the *date* and then a *build number*.
    For example, `0824.01`.
  * Every tag must be unique. To create more builds, increase the tag build number by 1. For example, `01`, `02`, `03`.
 
-The following sample tag for a connector in the `taco.postgres-unpackaged-jdbc-example` folder starts the pipeline: 
+The following sample tag for a connector in the `taco.postgres-unpackaged-jdbc-example` folder starts the pipeline:
 
 ```taco.postgres-unpackaged-jdbc-example.0824.01```
 
@@ -44,5 +44,5 @@ Use the validation email attachments.
 ### Use the Tableau workbook
 If your outbound IPs are on the Tableau VPC allowed list, you can see the test results in a Tableau workbook.
 <img src="images/connectivity_ci_workbook.png" alt="Sample test results in Tableau workbook">
-     
+
 If your test passed, your connector is valid and ready for use. If the test results showed errors, you can [tune your connector configuration](ci_tuning.html).
