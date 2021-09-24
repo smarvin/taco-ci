@@ -11,4 +11,4 @@ The CI Pipeline emails you a CSV file. This file contains detailed results for t
 
 For a test that failed, the *Error msg* column provides information on the failure. The generated log files included in your email can provide more details, including looking through logs on your product’s side.
 
-For more information, see [Fixing TDVT Test Failures](tdvt-test-case.html).
+For more information, see [Fixing TDVT Test Failures](https://tableau.github.io/connector-plugin-sdk/docs/tdvt-test-case).
