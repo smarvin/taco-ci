@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline testing
+title: CI Pipeline Testing
 keywords: CI pipeline
 sidebar: cip_sidebar
 permalink: ci_test.html
@@ -17,7 +17,7 @@ When you [create a tag](https://docs.github.com/en/desktop/contributing-and-coll
    For example, `0824.01`.
  * Every tag must be unique. To create more builds, increase the tag build number by 1. For example, `01`, `02`, `03`.
 
-The following sample tag for a connector in the `taco.postgres-unpackaged-jdbc-example` folder will start the pipeline: 
+The following sample tag for a connector in the `taco.postgres-unpackaged-jdbc-example` folder starts the pipeline: 
 
 ```taco.postgres-unpackaged-jdbc-example.0824.01```
 

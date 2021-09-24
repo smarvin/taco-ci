@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline overview
+title: CI Pipeline Overview
 keywords: CI pipeline
 sidebar: cip_sidebar
 permalink: ci_overview.html
@@ -7,7 +7,7 @@ summary: "The continuous integration (CI) pipeline lets you test and verify your
 folder: ci-pipeline
 ---
 
-The Continuous Integration (CI) Pipeline can test TACO files across many environments, including multiple operating systems, databases, driver versions, and Tableau versions. It allows you to debug on machines where errors happen and provides messages to identify and help debug specific issues.
+The Continuous Integration (CI) Pipeline can test TACO files across many environments, including multiple operating systems, databases, driver versions, and Tableau versions. It allows you to debug on machines where errors happen. It also provides messages to identify and help debug specific issues.
 
 ## Benefits of the CI pipeline
 
@@ -25,13 +25,13 @@ The Connectivity CI pipeline lets you:
 
 ## Your repository
 
-This GitHub repository (repo) is for your CI pipeline. The repo is for your resources (TACO files, related drivers, install script for the driver, TDS files that contain credentials to access your database, etc.).
+This GitHub repository (repo) is for your CI pipeline. The repo is for your resources (TACO files, related drivers, install script for the driver, TDS files that contain credentials to access your database, and so on).
 
 This repository has [triggers](https://docs.github.com/en/actions/reference/events-that-trigger-workflows) for [GitHub actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions) that we set up in advance. These triggers run CI validation flows for your drivers and TACO connectors.
 
-The repo also contains the configuration file for your CI TACO pipeline. This file, `ci.json`, points to your connector artifacts, drivers, and TDVT running setup. The `ci.json` file configures a group of resources that GitHub action workflow will pick up for running a CI validation workflow.
+The repo also contains the configuration file for your CI TACO pipeline. This file, `ci.json`, points to your connector artifacts, drivers, and TDVT running setup. The `ci.json` file configures a group of resources that the GitHub action workflow picks up for running a CI validation workflow.
 
-The [GitHub action workflow](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions) uses your `ci.json` file to run validation workflow. The following is a sample configuration file.
+The [GitHub action workflow](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions) uses your `ci.json` file to run a validation workflow. The following is a sample configuration file.
 <a id="config_file"></a>
 ```json
     {

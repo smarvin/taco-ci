@@ -1,5 +1,5 @@
 ---
-title: CI Pipeline configuration
+title: CI Pipeline Configuration
 keywords: CI pipeline
 sidebar: cip_sidebar
 summary: "Configure your GitHub repo to automate testing for your Tableau connector."
@@ -7,10 +7,10 @@ permalink: ci_configuration.html
 folder: ci-pipeline
 ---
 
-You can make changes to your repository locally or in the GitHub UI. To make your changes locally, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) this repository to your device.
+You can configure your repository locally or in the GitHub UI. To make your changes locally, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) this repository to your device.
 
 ## Step 1: Add your resources
-Add each resource listed below to its associated folder, where `<connector_folder>` is the name of your connector.
+Add each of the following resources to its associated folder, where `<connector_folder>` is the name of your connector.
 
 | Resource      | Directory |
 | ----------- | ----------- |
@@ -35,11 +35,11 @@ Add each resource listed below to its associated folder, where `<connector_folde
    |`driver-file-path`  | Path to your driver file |
    | `setup-script-file-path` | Path to your setup script file |
    | `driver-dependency-files-path` | Path to your dependency files |
-   | `connector-name` | Name of the your connector |
+   | `connector-name` | Name of your connector |
    | `test-suite-name` | Test suite name |
    | `test-config-files-path` | Path to your configuration file |
    | `tds-files-path` | Path to your TDS files  |
-   | `password-files-path` | Path to your password files (need to explain) |
+   | `password-files-path` | Path to your password files  |
    | `file-path` | Path to your Docker DB |
    | `setup-script-file-path` |Path to your Docker setup script  |
    | `result-receiver` | Email addresses to send test results |
@@ -55,4 +55,4 @@ If you are making changes locally, [commit](https://docs.github.com/en/desktop/c
 
 If you are making changes in the GitHub UI, add a description of your changes in the **Commit changes** area and click the **Commit changes** button.
 
-Once you have finished with the configuration tasks, you can [start an automated test](ci_test.html).
+After you have finished with the configuration tasks, you can [start an automated test](ci_test.html).
