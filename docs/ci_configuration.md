@@ -20,13 +20,13 @@ Add each of the following resources to its associated folder, where `<connector_
 | Driver dependency files  | `taco/<connector_folder>/driver/<os>`  |
 | Test configuration files  |  `taco/<connector_folder>/tdvt/config` |
 | Calcs and staples tables  | `taco/<connector_folder>/tdvt/tds`  |
-| Password files  | `taco/<connector_folder>/tdvt/password`  |
-| (optional) Docker DB file  | `taco/<connector_folder>/docker`  |
-| (optional) Docker setup script | `taco/<connector_folder>/docker`  |
+| (optional) Password files  | `taco/<connector_folder>/tdvt/password`  |
 
 ## Step 2: Edit your configuration file
 
-1. Open the `ci-default.json` file.
+The configuration file for the Github Action workflow is `ci.json`.
+
+1. Open the `ci.json` file for your connector.
 2. Edit the following key-value pairs to reflect your resources:
 
    | Key | Value |
@@ -44,8 +44,7 @@ Add each of the following resources to its associated folder, where `<connector_
    | `setup-script-file-path` |Path to your Docker setup script  |
    | `result-receiver` | Email addresses to send test results |
 
-3. Save the file as `ci.json`.
-4. Repeat for any other connector.
+3. Save the file.
 
 To see an example of the finished configuration file, see the <a href="#config_file">example cs.json</a> file.
 

@@ -36,47 +36,37 @@ The [GitHub action workflow](https://docs.github.com/en/actions/reference/workfl
 ```json
     {
     "connector": {
-      "connector-file-path": "taco/memsql-packaged/connector/MEMSQLTACOPACKAGED.taco"
+    "connector-file-path": "taco/postgres-packaged-jdbc/connector/unsigned_postgres_jdbc.taco"
     },
     "driver": {
       "skip": false,
-      "type": "odbc",
-      "driver-file-path": "taco/memsql-packaged/driver/centos/mysql-connector-odbc-8.0.13-1.el7.x86_64.rpm",
-      "setup-script-file-path": "taco/memsql-packaged/driver/centos/partnerODBCSetup-centos.sh",
-      "driver-dependency-files-path": [
-          "taco/memsql-packaged/driver/centos/libmyodbc8w.so"
-          "taco/memsql-packaged/driver/centos/partnerODBCConfig.ini"
-      ]
+    "type": "jdbc",
+    "driver-file-path": "taco/postgres-packaged-jdbc/driver/postgresql-42.2.5.jar",
+    "setup-script-file-path": "",
+    "driver-dependency-files-path": []
     },
     "os": "centos",
-    "builds": [
-      "near"
-    ],
+    "min-tableau-version": "tableau-2021-3",
     "tdvt": {
       "skip": false,
-      "connector-name": "memsql_taco_packaged",
-      "test-suite-name": "MEMSQLTACOPACKAGED",
+    "connector-name": "partner_postgres_jdbc_packaged",
+    "test-suite-name": "postgres_jdbc_unsigned_taco",
       "test-config-files-path": [
-        "taco/memsql-packaged/tdvt/config/MEMSQLTACOPACKAGED.ini"
+      "taco/postgres-packaged-jdbc/tdvt/config/postgres_jdbc_unsigned_taco.ini"
       ],
       "tds-files-path": [
-        "taco/memsql-packaged/tdvt/tds/cast_calcs.MEMSQLTACOPACKAGED.tds",
-        "taco/memsql-packaged/tdvt/tds/Staples.MEMSQLTACOPACKAGED.tds"
+      "taco/postgres-packaged-jdbc/tdvt/tds/cast_calcs.postgres_jdbc_unsigned_taco.tds"
       ],
       "password-files-path": [
-          "taco-memsql-packaged/tdvt/password/MEMSQLTACOPACKAGED_badpassword.password",
-          "taco-memsql-packaged/tdvt/password/MEMSQLTACOPACKAGED.password"
+      "taco/postgres-packaged-jdbc/tdvt/password/postgres_jdbc_unsigned_taco.password"
       ]
     },
     "docker-db": {
       "skip": true,
       "file-path": "",
       "setup-script-file-path": ""
-    },
-    "result-receiver": [
-      "ConnectivityCI@tableau.com"
-    ]
   }
+}
 ```
 
 ## How the CI pipeline works
