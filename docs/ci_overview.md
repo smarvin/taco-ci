@@ -73,7 +73,7 @@ The [GitHub action workflow](https://docs.github.com/en/actions/reference/workfl
 
 To configure a specific run, use your configuration file (`ci.json`). If you want to test various configuration versions, you can create several configuration files to define each unique set of options.
 
-When you are ready to run a test using the CI Pipeline, you add a release tag to your repository to trigger a GitHub action. GitHub action copies your resources into an Amazon S3 bucket for use by the CI pipeline.
+When you are ready to run a validation job using the pipeline, you could add a new release from your Github UI or push a new git tag to your repository to trigger a GitHub Action workflow. The GitHub Action workflow will validate your resources based on ci.json configuration and push your resources into an AWS S3 bucket to trigger further validation jobs. You would get result emails with validation results as defined in your ci.json or access validation results from our result database directly after we safelisted your outbound IP.
 
 <img src="images/connectivity_ci_pipeline_flow.jpg" alt="Connectivity CI pipeline flow" />
 

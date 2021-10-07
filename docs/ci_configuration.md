@@ -32,26 +32,18 @@ The configuration file for the Github Action workflow is `ci.json`.
    | Key | Value |
    | --- | ------ |
    | `connector-file-path`   | Path to your TACO file |
-   |`driver-file-path`  | Path to your driver file |
+   | `driver-file-path`  | Path to your driver file |
    | `setup-script-file-path` | Path to your setup script file |
    | `driver-dependency-files-path` | Path to your dependency files |
    | `connector-name` | Name of your connector |
    | `test-suite-name` | Test suite name |
    | `test-config-files-path` | Path to your configuration file |
    | `tds-files-path` | Path to your TDS files  |
-   | `password-files-path` | Path to your password files  |
-   | `file-path` | Path to your Docker DB |
-   | `setup-script-file-path` |Path to your Docker setup script  |
+   | `password-files-path` | Path to your tdvt password files |
    | `result-receiver` | Email addresses to send test results |
 
-3. Save the file.
+3. Commit the file changes, and create a new release from Github UI or push a new git tag to the repository to trigger the Github Action workflow to validate.
 
 To see an example of the finished configuration file, see the <a href="#config_file">example cs.json</a> file.
-
-## Step 3: Get your changes in the repo
-
-If you are making changes locally, [commit](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project) and [push](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/pushing-changes-to-github) your changes to GitHub.
-
-If you are making changes in the GitHub UI, add a description of your changes in the **Commit changes** area and click the **Commit changes** button.
 
 After you have finished with the configuration tasks, you can [start an automated test](ci_test.html).
